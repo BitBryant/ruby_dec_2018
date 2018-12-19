@@ -1,0 +1,1 @@
+{"virtualbox":{"/vagrant":{"mount_options":["dmode=774","fmode=775","uid=1000","gid=1000"],"guestpath":"/vagrant","hostpath":"C:/Users/DANA TRINH/Desktop/Dojo/Ruby/first_vagrant_box","disabled":false,"__vagrantfile":true}}}

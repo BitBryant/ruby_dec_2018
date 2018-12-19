@@ -1,0 +1,24 @@
+<h1>Create new User</h1>
+<% if flash[:notice] %>
+  <% flash[:notice].each do |note| %>
+    <p id="notice"><%= note %></p>  
+  <% end %>
+<% end %>
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error| %>
+    <p id="errors">First name <%= error %></p>
+  <% end %>
+<% end %>
+
+<form action = "/users/new" method = "post">
+  <input type = 'hidden' name = "authenticity_token" value = "<%=form_authenticity_token%>">
+  <label>Name</label>
+  <input type = "text" name = "user[name]" id = "Name">
+  <label>Email</label>
+  <input type="text" name="user[email]" id = "Email">  
+  <label>Password</label>
+  <input type="text" name="user[password]" id = "Password">  
+  <label>Confirm Password</label>
+  <input type="text" name="user[Password_Confirmation]" id = "Password_Confirmation">  
+  <input type = "submit" value = "Join">
+</form>

@@ -1,0 +1,16 @@
+<h1>Update User Information</h1>
+<div>
+<form action = "/users/<%= @user.id %>/edit" method = "post">
+  <input type = 'hidden' name = "authenticity_token" value = "<%=form_authenticity_token%>">
+  <label>Name</label>
+  <input type = "text" name = "user[name]" id = "Name" value='<%= @user.name %>'>
+  <label>Email</label>
+  <input type="text" name="user[email]" id = "Email" value='<%= @user.email %>'>
+  <input type = "submit" value = "Update">
+</form>
+<form action = "/users/<%= @user.id %>/destroy" method = "post">
+  <input type = 'hidden' name = "authenticity_token" value = "<%=form_authenticity_token%>">
+  <input type="hidden" name="_method" value="delete">
+  <input type = "submit" value = "Delete Account">
+</form>
+</div>

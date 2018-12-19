@@ -1,0 +1,11 @@
+<% if flash[:notice] %>
+<p class="bg-success text-white"><%= flash[:notice] %></p>
+<% end %>
+<p><%= "You have submitted this form #{session[:counter]} times now" %></p>
+<b><u>Submitted Info</u></b>
+<ul>
+	<li>Name: <%= @user.name %> </li>
+	<li>Dojo Location: <%= @user.location %> </li>
+	<li>Favorite Language: <%= @user.language %> </li>
+	<li>Comment:<%= @user.comment %> </li>
+</ul>
